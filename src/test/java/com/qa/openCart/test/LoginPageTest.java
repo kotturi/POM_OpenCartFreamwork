@@ -32,7 +32,7 @@ public class LoginPageTest extends BaseTest{
 	
 	//WebDriver driver;
 	
-	@Description("checking open cart login page title...")
+	@Description("checking open cart login Page Title.......")
 	@Severity(SeverityLevel.MINOR)
 	@Test (description="checking login title")
 	public void loginPageTitleTest()
