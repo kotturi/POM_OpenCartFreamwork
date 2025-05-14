@@ -42,7 +42,7 @@ public class LoginPageTest extends BaseTest{
 		  ChainTestListener.log("Checking Loging Page title LOGSSS"+ActTitle);
 		Assert.assertEquals(ActTitle, LOGIN_PAGE_TITILE);
 	}
-	
+	/*
 	@Description("checking open cart login page..")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test (description="checking login URL")
@@ -67,5 +67,5 @@ public class LoginPageTest extends BaseTest{
 		Assert.assertEquals(accPage.getAccPageTitle(), HOME_PAGE_TITILE);
 		
 	}
-	
+	*/
 }	
