@@ -24,18 +24,23 @@ import com.qa.openCart.pages.SearchResultsPage;
 import com.qa.openCart.pages.productInfoPage;
 import com.qa.openCart.utils.LogsUtils;
 
-@Listeners(ChainTestListener.class)
+import io.qameta.allure.Description;
+
+//@Listeners(ChainTestListener.class)
 public class BaseTest {
 	WebDriver driver;
 	DriverFactory df;
 	protected Properties prop;
+	
 	protected LoginPage loginPage;
 	protected AccountsPage accPage;
 	protected SearchResultsPage searchResultPage;
 	protected productInfoPage productInfoPage;
 	protected RegistrationPage registerPage;
+	
 	public static final Logger log=LogManager.getLogger(BaseTest.class);
 
+	@Description("init the driver and properties")
 	@Parameters({"browser"})
 	@BeforeTest
 	public void setup(String browserName) {
@@ -55,7 +60,7 @@ public class BaseTest {
 //	public void beforeMethod(ITestContext result)
 //	{
 //		LogsUtils.Info("----------Method Started"+result.getName());
-//	}
+//	}	
 	@AfterMethod
 	public void attachScreenshot(ITestResult result)
 	{
@@ -66,6 +71,7 @@ public class BaseTest {
 		//ChainTestListener.embed(DriverFactory.getScreenshotFile(), "image/png");
 		  LogsUtils.Info("----------Method Ended"+result.getMethod().getMethodName());
 	}
+	@Description("closing the browser")
 	@AfterTest
 	public void tearDown() {
 		driver.quit();

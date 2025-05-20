@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="com.qa.openCart.test" verbose="4"><!--thread-count="2" parallel="tests"-->
+<suite name="com.qa.openCart.test" verbose="4" thread-count="3" parallel="tests">
 
 	<listeners>
 		<!--<listener class-name="com.aventstack.chaintest.plugins.ChainTestListeners" />-->
@@ -11,35 +11,36 @@
 
 
 	<test name="Login Page Test_chrome">
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.openCart.test.LoginPageTest" />
 		</classes>
 	</test>
 
-<!--	<test name="Account Page firefox">
-		<parameter name="browser" value="chrome"></parameter>
+	<test name="Account Page_firefox">
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.qa.openCart.test.AccountPageTest" />
 		</classes>
 	</test>
 
-	<test name="Search Page_firefox">
+	<test name="Search Page_chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.openCart.test.SearchTest" />
 		</classes>
 	</test>
-	<test name="ProductInfo Page Test">
+
+	<test name="ProductInfo Page Test_Chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.openCart.test.ProductInfoPageTest" />
 		</classes>
 	</test>
-	<test name="Register Page Test">
-		<parameter name="browser" value="chrome"></parameter>
+	<test name="Register Page Test_firefox">
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.qa.openCart.test.RegisterPageTest" />
 		</classes>
-	</test>-->
+	</test>
 </suite>
