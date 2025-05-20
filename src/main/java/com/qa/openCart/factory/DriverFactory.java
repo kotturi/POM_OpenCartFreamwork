@@ -122,7 +122,7 @@ public class DriverFactory {
  	// mvn clean install -Denv="qa"
 	public Properties initProp() {
 
-		String envName = System.getProperty("env");
+		String envName = System.getProperty("qa");
 		FileInputStream ip = null;
 		prop= new Properties();
 		try {
